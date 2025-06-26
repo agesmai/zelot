@@ -8,8 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:zelot": "node dist/zelot/server/server.mjs",
-    "build-gh": "ng build zelot --configuration production --output-path docs --base-href /zelot/ --output-mode static && xcopy /E /Y docs\\\\browser\\\\* docs\\\\ && rmdir /S /Q docs\\\\browser"
-  },
+    "build-gh": "ng build zelot --configuration production --output-path docs --base-href /zelot/ --output-mode static && xcopy /E /Y docs\\\\browser\\\\* docs\\\\ && rmdir /S /Q docs\\\\browser",
+    "deploy-gh": "npm run build-gh && git add docs && git commit -m \"Deploy to GitHub Pages\" && git push origin main"
+},
   "prettier": {
     "overrides": [
       {
