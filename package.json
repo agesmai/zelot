@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:zelot": "node dist/zelot/server/server.mjs",
-    "build-gh": "ng build --output-path docs --base-href /zelot/"
+    "build-gh": "ng build zelot --configuration production --output-path docs --base-href /zelot/ --output-mode static && xcopy /E /Y docs\\\\browser\\\\* docs\\\\ && rmdir /S /Q docs\\\\browser"
   },
   "prettier": {
     "overrides": [
