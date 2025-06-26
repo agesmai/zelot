@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:zelot": "node dist/zelot/server/server.mjs"
+    "serve:ssr:zelot": "node dist/zelot/server/server.mjs",
+    "build-gh": "ng build --output-path docs --base-href /zelot/"
   },
   "prettier": {
     "overrides": [
